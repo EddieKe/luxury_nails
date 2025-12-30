@@ -117,25 +117,57 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+@theme inline {
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --color-primary: var(--primary);
+  --color-accent: var(--accent);
+}
+
 @layer base {
+
+  /* THE FIX: These rules ensure nothing pushes the width past 100% */
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: clip;
+    /* Modern fix for mobile horizontal scroll */
+    position: relative;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Prevent images from ever being wider than their container */
+  img,
+  svg,
+  video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
   * {
     @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
+    box-sizing: border-box;
   }
 }
 
-/* Hide scrollbar for horizontal scroll sections */
+/* Utilities for your components */
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
 
-/* Add smooth scroll behavior for anchor navigation */
 html {
   scroll-behavior: smooth;
+}
+
+/* Glassmorphism Helper */
+.glass {
+  @apply bg-white/60 backdrop-blur-xl border border-white/50;
 }

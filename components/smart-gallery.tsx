@@ -281,6 +281,7 @@ export function SmartGallery() {
                       width={500}
                       height={700}
                       className="h-auto w-full object-contain transition-transform duration-700 group-hover:scale-105"
+                      sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
                     />
                     <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 via-transparent to-transparent p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                       <motion.h3 layoutId={`title-${item.id}`} className="font-serif text-lg font-medium text-white">
@@ -331,6 +332,7 @@ export function SmartGallery() {
                     fill
                     priority
                     className="object-contain p-4 md:p-8"
+                    sizes="(max-width: 768px) 100vw, 600px"
                   />
 
                   {selectedItem.subImages.length > 0 && (

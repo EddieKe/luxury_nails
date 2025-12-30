@@ -13,7 +13,7 @@ interface AuraOrbProps {
 function AuraOrb({ className, color, size, delay = 0, duration = 20 }: AuraOrbProps) {
   return (
     <motion.div
-      className={`absolute rounded-full blur-3xl ${className}`}
+      className={`absolute rounded-full blur-xl md:blur-3xl ${className}`}
       style={{
         background: color,
         width: size,

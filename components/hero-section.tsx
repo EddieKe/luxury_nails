@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import { ArrowRight, Sparkles } from "lucide-react"
+import Image from "next/image"
 
 export function HeroSection() {
   return (
@@ -141,10 +142,13 @@ export function HeroSection() {
                 className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
               >
                 <div className="relative h-[320px] w-[280px] lg:h-[400px] lg:w-[350px] overflow-hidden rounded-3xl border border-white/50 bg-white/40 p-6 shadow-2xl backdrop-blur-xl">
-                  <img
+                  <Image
                     src="/hero_face.jpeg"
                     alt="Luxury nail art showcase"
-                    className="h-full w-full rounded-2xl object-cover"
+                    fill
+                    className="object-cover rounded-2xl"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 350px"
+                    priority
                   />
                   {/* Soft colored shadow */}
                   <div className="absolute -bottom-10 left-1/2 h-32 w-3/4 -translate-x-1/2 rounded-full bg-pink-300/40 blur-3xl" />
