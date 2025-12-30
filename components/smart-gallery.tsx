@@ -191,7 +191,7 @@ export function SmartGallery() {
     const message = encodeURIComponent(
       `Hi Dan, I want to book this specific ${item.category} design: "${item.title}" (${item.price}). Can we schedule an appointment?`,
     )
-    window.open(`https://wa.me/254715702251?text=${message}`, "_blank")
+    window.open(`https://wa.me/254799331533?text=${message}`, "_blank")
   }
 
   const nextImage = () => {
