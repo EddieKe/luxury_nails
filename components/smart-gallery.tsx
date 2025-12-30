@@ -189,7 +189,7 @@ export function SmartGallery() {
 
   const handleWhatsApp = (item: (typeof galleryItems)[0]) => {
     const message = encodeURIComponent(
-      `Hi Dan, I want to book this specific ${item.category} design: "${item.title}" (${item.price}). Can we schedule an appointment?`,
+      `Hi Zara, I want to book this specific ${item.category} design: "${item.title}" (${item.price}). Can we schedule an appointment?`,
     )
     window.open(`https://wa.me/254799331533?text=${message}`, "_blank")
   }
